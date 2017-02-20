@@ -1,3 +1,7 @@
+package Opdracht1.Classes;
+
+import Opdracht1.Color;
+
 import java.awt.*;
 
 /**

@@ -1,3 +1,5 @@
+package Opdracht1;
+
 /**
  * Created by user on 15-2-2017.
  */
