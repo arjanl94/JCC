@@ -1,33 +1,47 @@
 package Opdracht1.Classes;
 
+import Opdracht1.*;
+import Opdracht1.Color;
+
 import java.awt.*;
 
 /**
- * Created by user on 16-2-2017.
+ * Created by Arjan on 16-2-2017.
  */
-public class Oval extends DrawingItem{
-    private Double weight;
+public class Oval extends DrawingItem
+{
+    private double weight;
+    private double width;
+    private double height;
 
-    public Double getWeight() {
+    public double getWeight() {
         return weight;
     }
 
-    public void setWeight(Double weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 
     @Override
-    public Point getAnchor() {
-        return null;
-    }
-
-    @Override
     public double getWidth() {
-        return 0;
+        return this.width;
     }
 
     @Override
     public double getHeight() {
-        return 0;
+        return this.height;
+    }
+
+    public Oval(Color color, Point anchor, double weight, double width, double height)
+    {
+        super(color, anchor);
+        this.weight = weight;
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    public String toString(){
+        return "Oval - Color: " + getColor() + " Anchor x/y: " + getAnchor().getX() + "/" + getAnchor().getY() + " Weight: " + weight + " Width/Height: " + width + "/" + height;
     }
 }

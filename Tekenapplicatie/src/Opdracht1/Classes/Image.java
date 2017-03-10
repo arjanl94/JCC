@@ -1,12 +1,15 @@
 package Opdracht1.Classes;
 
+import Opdracht1.*;
+
 import java.awt.*;
 import java.io.File;
 
 /**
- * Created by user on 16-2-2017.
+ * Created by Arjan on 16-2-2017.
  */
-public class Image extends DrawingItem {
+public class Image extends DrawingItem
+{
     private File file;
 
     @Override
@@ -24,4 +27,9 @@ public class Image extends DrawingItem {
         return 0;
     }
 
+    public Image(Opdracht1.Color color, Point anchor, File file)
+    {
+        super(color, anchor);
+        this.file = file;
+    }
 }

@@ -3,9 +3,10 @@ package Opdracht1.Classes;
 import java.awt.*;
 
 /**
- * Created by user on 16-2-2017.
+ * Created by Arjan on 16-2-2017.
  */
-public class PaintedText extends DrawingItem{
+public class PaintedText extends DrawingItem
+{
     private String content;
     private String fontName;
 
@@ -26,11 +27,6 @@ public class PaintedText extends DrawingItem{
     }
 
     @Override
-    public Point getAnchor() {
-        return null;
-    }
-
-    @Override
     public double getWidth() {
         return 0;
     }
@@ -38,5 +34,17 @@ public class PaintedText extends DrawingItem{
     @Override
     public double getHeight() {
         return 0;
+    }
+
+    public PaintedText(Opdracht1.Color color, Point anchor, String content, String fontname)
+    {
+        super(color, anchor);
+        this.content = content;
+        this.fontName = fontname;
+    }
+
+    @Override
+    public String toString(){
+        return "Painted Text - Color: " + getColor() + " Anchor x/y: " + getAnchor().getX() + "/" + getAnchor().getY() + " Font: " + getFontName();
     }
 }
