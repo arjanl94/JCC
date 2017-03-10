@@ -25,18 +25,43 @@ public class Polygon extends DrawingItem
     }
 
     @Override
-    public Point getAnchor() {
-        return null;
+    public double getWidth()
+    {
+        double min = 1000;
+        double max = 0;
+        for (Point x : vertices)
+        {
+            if (x.getX() < min)
+            {
+                min = x.getX();
+            }
+            if (x.getX() > max)
+            {
+                max = x.getX();
+            }
+        }
+        double weight = max - min;
+        return weight;
     }
 
     @Override
-    public double getWidth() {
-        return 0;
-    }
-
-    @Override
-    public double getHeight() {
-        return 0;
+    public double getHeight()
+    {
+        double min = 1000;
+        double max = 0;
+        for (Point y : vertices)
+        {
+            if  (y.getY() < min)
+            {
+                min = y.getY();
+            }
+            if (y.getY() > max)
+            {
+                max = y.getY();
+            }
+        }
+        double height = max - min;
+        return height;
     }
 
     public Polygon(Opdracht1.Color color, Point anchor, Double weight, Point[] vertices)

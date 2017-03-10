@@ -1,0 +1,6 @@
+
+Usquid:S1213";Move this constructor to comply with Java Code Conventions.(Á›áùÿÿÿÿ
+fsquid:HiddenFieldCheck":Rename "weight" which hides the field declared at line 13.(èŒƒ·üÿÿÿÿ8ÕÎŒÏ«+
+msquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(±ìĞÆ
+squid:S1488"^Immediately return this expression instead of assigning it to the temporary variable "weight".(èŒƒ·üÿÿÿÿ8ÕÎŒÏ«+
+squid:S1488"^Immediately return this expression instead of assigning it to the temporary variable "height".(ô¾î©ùÿÿÿÿ8ŠÓ—Ï«+

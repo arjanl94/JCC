@@ -1,0 +1,13 @@
+
+Rsquid:S1213"8Move this variable to comply with Java Code Conventions.(ü•÷ãúÿÿÿÿ
+Rsquid:S1213"8Move this variable to comply with Java Code Conventions.(Û®­Òùÿÿÿÿ
+Œsquid:S1319"rThe type of the "doubles" object should be an interface such as "List" rather than the implementation "ArrayList".(¥‘¼Ûüÿÿÿÿ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(ÓÍä¨ÿÿÿÿÿ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(ÓÍä¨ÿÿÿÿÿ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(ÓÍä¨ÿÿÿÿÿ
+Csquid:S1481")Remove this unused "root" local variable.(øœäæıÿÿÿÿ
+Rsquid:S1854"8Remove this useless assignment to local variable "root".(øœäæıÿÿÿÿ
+rsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(¤¿ªıÿÿÿÿ

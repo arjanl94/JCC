@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Opdracht1/Classes/Drawing.java" afterPath="$PROJECT_DIR$/src/Opdracht1/Classes/Drawing.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Opdracht1/Classes/DrawingItem.java" afterPath="$PROJECT_DIR$/src/Opdracht1/Classes/DrawingItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Opdracht1/Classes/Image.java" afterPath="$PROJECT_DIR$/src/Opdracht1/Classes/Image.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Opdracht1/Classes/Oval.java" afterPath="$PROJECT_DIR$/src/Opdracht1/Classes/Oval.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Opdracht1/Classes/PaintedText.java" afterPath="$PROJECT_DIR$/src/Opdracht1/Classes/PaintedText.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Opdracht1/Classes/Polygon.java" afterPath="$PROJECT_DIR$/src/Opdracht1/Classes/Polygon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Opdracht1/Color.java" afterPath="$PROJECT_DIR$/src/Opdracht1/Color.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Opdracht1/Main.java" afterPath="$PROJECT_DIR$/src/Opdracht1/Main.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,8 +73,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Opdracht1/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="70" column="59" lean-forward="false" selection-start-line="70" selection-start-column="59" selection-end-line="70" selection-end-column="59" />
+            <state relative-caret-position="331">
+              <caret line="52" column="53" lean-forward="false" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,8 +108,8 @@
       <file leaf-file-name="PaintedText.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Opdracht1/Classes/PaintedText.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="527">
+              <caret line="39" column="58" lean-forward="true" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -145,21 +138,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Polygon.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Polygon.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Opdracht1/Classes/Polygon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="50" column="75" lean-forward="false" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
+            <state relative-caret-position="612">
+              <caret line="63" column="22" lean-forward="false" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#873#874#0" expanded="true" />
-                <element signature="e#956#957#0" expanded="true" />
+                <element signature="e#1465#1466#0" expanded="true" />
+                <element signature="e#1548#1549#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Oval.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Color.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Opdracht1/Color.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Oval.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Opdracht1/Classes/Oval.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="544">
@@ -223,10 +226,10 @@
         <option value="$PROJECT_DIR$/src/Opdracht1/Classes/Drawing.java" />
         <option value="$PROJECT_DIR$/src/Opdracht1/Classes/DrawingItem.java" />
         <option value="$PROJECT_DIR$/src/Opdracht1/Classes/Oval.java" />
-        <option value="$PROJECT_DIR$/src/Opdracht1/Classes/Polygon.java" />
-        <option value="$PROJECT_DIR$/src/Opdracht1/Classes/PaintedText.java" />
         <option value="$PROJECT_DIR$/src/Opdracht1/sample.fxml" />
         <option value="$PROJECT_DIR$/src/Opdracht1/Main.java" />
+        <option value="$PROJECT_DIR$/src/Opdracht1/Classes/PaintedText.java" />
+        <option value="$PROJECT_DIR$/src/Opdracht1/Classes/Polygon.java" />
       </list>
     </option>
   </component>
@@ -785,7 +788,7 @@
       <workItem from="1488014492623" duration="1202000" />
       <workItem from="1488893417309" duration="38000" />
       <workItem from="1488894777994" duration="77000" />
-      <workItem from="1489174322072" duration="729000" />
+      <workItem from="1489174322072" duration="3224000" />
     </task>
     <task id="LOCAL-00001" summary="Comment">
       <created>1487261170041</created>
@@ -805,7 +808,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58347000" />
+    <option name="totallyTimeSpent" value="60842000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -885,8 +888,8 @@
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#873#874#0" expanded="true" />
-            <element signature="e#956#957#0" expanded="true" />
+            <element signature="e#1465#1466#0" expanded="true" />
+            <element signature="e#1548#1549#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -962,8 +965,8 @@
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#873#874#0" expanded="true" />
-            <element signature="e#956#957#0" expanded="true" />
+            <element signature="e#1465#1466#0" expanded="true" />
+            <element signature="e#1548#1549#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1039,8 +1042,8 @@
           <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#873#874#0" expanded="true" />
-            <element signature="e#956#957#0" expanded="true" />
+            <element signature="e#1465#1466#0" expanded="true" />
+            <element signature="e#1548#1549#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1238,33 +1241,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Opdracht1/Classes/Point.java" />
-    <entry file="file://$PROJECT_DIR$/src/Opdracht1/Color.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Opdracht1/Classes/Polygon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="50" column="75" lean-forward="false" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#873#874#0" expanded="true" />
-            <element signature="e#956#957#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Opdracht1/Classes/PaintedText.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Opdracht1/sample.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1284,37 +1260,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Opdracht1/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="70" column="59" lean-forward="false" selection-start-line="70" selection-start-column="59" selection-end-line="70" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Opdracht1/Classes/Drawing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-          <folding>
-            <element signature="e#526#527#0" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Opdracht1/Classes/DrawingItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Opdracht1/Classes/Image.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1329,6 +1274,65 @@
           <caret line="40" column="5" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Opdracht1/Classes/PaintedText.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="39" column="58" lean-forward="true" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Opdracht1/Classes/DrawingItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Opdracht1/Color.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Opdracht1/Classes/Drawing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+          <folding>
+            <element signature="e#526#527#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Opdracht1/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="52" column="53" lean-forward="false" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Opdracht1/Classes/Polygon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="63" column="22" lean-forward="false" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1465#1466#0" expanded="true" />
+            <element signature="e#1548#1549#0" expanded="true" />
           </folding>
         </state>
       </provider>

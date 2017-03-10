@@ -28,12 +28,18 @@ public class PaintedText extends DrawingItem
 
     @Override
     public double getWidth() {
-        return 0;
+        Font font = new Font(fontName,Font.PLAIN, 10);
+        FontMetrics fontMetrics = new FontMetrics(font){};
+        double width = fontMetrics.stringWidth(content);
+        return width;
     }
 
     @Override
     public double getHeight() {
-        return 0;
+        Font font = new Font(fontName,Font.PLAIN, 10);
+        FontMetrics fontMetrics = new FontMetrics(font){};
+        double height = fontMetrics.getHeight();
+        return height;
     }
 
     public PaintedText(Opdracht1.Color color, Point anchor, String content, String fontname)
