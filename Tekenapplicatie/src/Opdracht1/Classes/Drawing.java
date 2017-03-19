@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Created by Arjan on 15-2-2017.
  */
-public class Drawing
+public class Drawing implements java.io.Serializable
 {
     private String name;
     private ArrayList<DrawingItem> drawingItems = new ArrayList<>();
@@ -22,6 +22,10 @@ public class Drawing
 
     public void addDrawing(DrawingItem item){
         drawingItems.add(item);
+    }
+
+    public void removeDrawings(){
+        drawingItems.clear();
     }
 
     public ArrayList<DrawingItem> getDrawingItems(){

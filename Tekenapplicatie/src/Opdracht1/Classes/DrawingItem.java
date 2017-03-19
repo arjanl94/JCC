@@ -3,13 +3,14 @@ package Opdracht1.Classes;
 import Opdracht1.Color;
 
 import java.awt.*;
+import java.io.Serializable;
 import java.util.Comparator;
 
 
 /**
  * Created by Arjan on 15-2-2017.
  */
-public abstract class DrawingItem implements Comparator<DrawingItem>
+public abstract class DrawingItem implements Comparator<DrawingItem>, Serializable
 {
     private Color color;
     private Point anchor;

@@ -3,6 +3,7 @@ package Opdracht1.Classes;
 import Opdracht1.*;
 
 import java.awt.*;
+import java.io.Serializable;
 
 /**
  * Created by Arjan on 16-2-2017.

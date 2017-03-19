@@ -24,9 +24,12 @@ public class Controller implements Initializable {
     public Canvas canvas;
     public ComboBox lbitems;
     public Button btnadd;
+    public Button btnsave;
+    public Button btnload;
     private int number = 0;
 
     private Drawing drawing = new Drawing("Test");
+    private SerializeDrawing serializedrawing = new SerializeDrawing();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -53,8 +56,8 @@ public class Controller implements Initializable {
     }
 
     public void DrawItems(Drawing drawing){
+        clearCanvas();
         GraphicsContext gc = canvas.getGraphicsContext2D();
-        gc.clearRect(0,0,canvas.getWidth(), canvas.getHeight());
         for (DrawingItem item: drawing.getDrawingItems())
         {
             if (item instanceof Oval){
@@ -103,5 +106,24 @@ public class Controller implements Initializable {
             i++;
         }
         return ret;
+    }
+
+    public void saveDrawing(MouseEvent mouseEvent) {
+        serializedrawing.save(drawing);
+    }
+
+    public void loadDrawing(MouseEvent mouseEvent) {
+        drawing = serializedrawing.load();
+        DrawItems(drawing);
+    }
+
+    public void clearDrawing(MouseEvent mouseEvent) {
+        clearCanvas();
+        drawing.removeDrawings();
+    }
+
+    public void clearCanvas(){
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+        gc.clearRect(0,0,canvas.getWidth(), canvas.getHeight());
     }
 }
