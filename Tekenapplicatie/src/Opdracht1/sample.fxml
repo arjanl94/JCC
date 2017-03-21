@@ -15,5 +15,9 @@
       <Button fx:id="btnsave" layoutX="406.0" layoutY="356.0" mnemonicParsing="false" onMouseClicked="#saveDrawing" text="Save" />
       <Button fx:id="btnload" layoutX="514.0" layoutY="356.0" mnemonicParsing="false" onMouseClicked="#loadDrawing" text="Load" />
       <Button fx:id="btnadd1" layoutX="514.0" layoutY="74.0" mnemonicParsing="false" onMouseClicked="#clearDrawing" text="Clear" />
+      <Label layoutX="405.0" layoutY="329.0" text="Serialize" />
+      <Label layoutX="405.0" layoutY="266.0" text="Database" />
+      <Button fx:id="btnsavedb" layoutX="404.0" layoutY="293.0" mnemonicParsing="false" onMouseClicked="#saveDb" text="Save" />
+      <Button fx:id="btnloaddb" layoutX="514.0" layoutY="293.0" mnemonicParsing="false" onMouseClicked="#loadDb" text="Load" />
    </children>
 </AnchorPane>

@@ -12,8 +12,7 @@ public class SerializeDrawing {
     }
 
     public Drawing load(){
-        try {
-            FileInputStream f = new FileInputStream("D:/Users/user/drawing.ser");
+        try(FileInputStream f = new FileInputStream("D:/Users/user/drawing.ser")){
             ObjectInputStream input = new ObjectInputStream(f);
             Drawing drawing = (Drawing) input.readObject();
             input.close();
@@ -32,8 +31,8 @@ public class SerializeDrawing {
     }
     public boolean save(Drawing drawing){
         if (drawing != null){
-            try {
-                FileOutputStream f = new FileOutputStream("D:/Users/user/drawing.ser");
+            try
+                (FileOutputStream f = new FileOutputStream("D:/Users/user/drawing.ser")){
                 ObjectOutputStream out = new ObjectOutputStream(f);
                 out.writeObject(drawing);
                 out.close();

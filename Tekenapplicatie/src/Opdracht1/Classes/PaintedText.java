@@ -9,6 +9,8 @@ public class PaintedText extends DrawingItem
 {
     private String content;
     private String fontName;
+    private int Width;
+    private int Height;
 
     public String getContent() {
         return content;
@@ -27,10 +29,16 @@ public class PaintedText extends DrawingItem
     }
 
     @Override
+    Rectangle boundingBox() {
+        return new Rectangle(getAnchor().x, getAnchor().y, Width, Height);
+    }
+
+    @Override
     public double getWidth() {
         Font font = new Font(fontName,Font.PLAIN, 10);
         FontMetrics fontMetrics = new FontMetrics(font){};
         double width = fontMetrics.stringWidth(content);
+        Width = (int)width;
         return width;
     }
 
@@ -39,6 +47,7 @@ public class PaintedText extends DrawingItem
         Font font = new Font(fontName,Font.PLAIN, 10);
         FontMetrics fontMetrics = new FontMetrics(font){};
         double height = fontMetrics.getHeight();
+        Height = (int)height;
         return height;
     }
 

@@ -13,6 +13,11 @@ public class Image extends DrawingItem
     private File file;
 
     @Override
+    Rectangle boundingBox() {
+        return null;
+    }
+
+    @Override
     public Point getAnchor() {
         return null;
     }

@@ -21,15 +21,15 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
     @FXML
-    public Canvas canvas;
+    private Canvas canvas;
     public ComboBox lbitems;
     public Button btnadd;
     public Button btnsave;
     public Button btnload;
-    private int number = 0;
 
     private Drawing drawing = new Drawing("Test");
     private SerializeDrawing serializedrawing = new SerializeDrawing();
+    private Database database = new Database();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -41,12 +41,33 @@ public class Controller implements Initializable {
             Point[] points = new Point[] {new Point(110, 110), new Point(110, 135), new Point( 190,160), new Point(200, 110)};
             drawing.addDrawing(new Opdracht1.Classes.Polygon(Opdracht1.Color.RED, new Point(200,200), 2.0, points));
         }
-        else if (lbitems.getValue() == "Oval"){
-            drawing.addDrawing(new Oval(Opdracht1.Color.GREEN, new Point(10,10), 5, 50, 50));
-        }
         else if (lbitems.getValue() == "Text"){
-            if (number == 0){
-                drawing.addDrawing(new PaintedText(Opdracht1.Color.BLACK, new Point(50,100), "Dit is tekst", "Serif"));
+            drawing.addDrawing(new PaintedText(Opdracht1.Color.BLACK, new Point(50,100), "Dit is tekst", "Serif"));
+        }
+        else if (lbitems.getValue() == "Oval"){
+            if (drawing.getNumber() == 0){
+                drawing.addDrawing(new Oval(Opdracht1.Color.GREEN, new Point(10,10), 5, 50, 50));
+                drawing.setNumber(1);
+            }
+            else{
+                drawing.addDrawing(new Oval(Opdracht1.Color.BLUE, new Point(220,20), 10,90,180));
+            }
+        }
+        DrawItems(drawing);
+    }
+
+    public void addDrawings(String item){
+        if (item.equals("Polygon")){
+            Point[] points = new Point[] {new Point(110, 110), new Point(110, 135), new Point( 190,160), new Point(200, 110)};
+            drawing.addDrawing(new Opdracht1.Classes.Polygon(Opdracht1.Color.RED, new Point(200,200), 2.0, points));
+        }
+        else if (item.equals("Text")){
+            drawing.addDrawing(new PaintedText(Opdracht1.Color.BLACK, new Point(50,100), "Dit is tekst", "Serif"));
+        }
+        else if (item.equals("Oval")){
+            if (drawing.getNumber() == 0){
+                drawing.addDrawing(new Oval(Opdracht1.Color.GREEN, new Point(10,10), 5, 50, 50));
+                drawing.setNumber(1);
             }
             else{
                 drawing.addDrawing(new Oval(Opdracht1.Color.BLUE, new Point(220,20), 10,90,180));
@@ -125,5 +146,26 @@ public class Controller implements Initializable {
     public void clearCanvas(){
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.clearRect(0,0,canvas.getWidth(), canvas.getHeight());
+    }
+
+    public void saveDb(MouseEvent mouseEvent) {
+        for (DrawingItem item:drawing.getDrawingItems()) {
+            if (item instanceof Oval){
+                database.saveItems("Oval");
+            }
+            else if (item instanceof PaintedText){
+                database.saveItems("Text");
+            }
+            else if (item instanceof Polygon){
+                database.saveItems("Polygon");
+            }
+        }
+    }
+
+    public void loadDb(MouseEvent mouseEvent) {
+        ArrayList<String> drawitems = database.loadItems();
+        for (String item: drawitems) {
+            addDrawings(item);
+        }
     }
 }

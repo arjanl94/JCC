@@ -12,6 +12,10 @@ public class Polygon extends DrawingItem
 {
     private Point[] vertices;
     private Double weight;
+    private int x;
+    private int y;
+    private int Width;
+    private int Height;
 
     public Point[] getVertices() {
         return vertices;
@@ -23,6 +27,11 @@ public class Polygon extends DrawingItem
 
     public void setWeight(Double weight) {
         this.weight = weight;
+    }
+
+    @Override
+    Rectangle boundingBox() {
+        return new Rectangle(x, y, Width, Height);
     }
 
     @Override
@@ -41,8 +50,10 @@ public class Polygon extends DrawingItem
                 max = x.getX();
             }
         }
-        double weight = max - min;
-        return weight;
+        double width = max - min;
+        x = (int)min;
+        Width = (int)width;
+        return width;
     }
 
     @Override
@@ -62,6 +73,8 @@ public class Polygon extends DrawingItem
             }
         }
         double height = max - min;
+        y = (int)min;
+        Height = (int)height;
         return height;
     }
 

@@ -9,6 +9,7 @@ public class Drawing implements java.io.Serializable
 {
     private String name;
     private ArrayList<DrawingItem> drawingItems = new ArrayList<>();
+    private int number;
 
     public String getName()
     { return name; }
@@ -30,5 +31,13 @@ public class Drawing implements java.io.Serializable
 
     public ArrayList<DrawingItem> getDrawingItems(){
         return drawingItems;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 }

@@ -14,6 +14,8 @@ public abstract class DrawingItem implements Comparator<DrawingItem>, Serializab
 {
     private Color color;
     private Point anchor;
+    private DrawingItem previousState;
+    abstract Rectangle boundingBox();
 
     public Color getColor() {
         return color;
@@ -41,5 +43,22 @@ public abstract class DrawingItem implements Comparator<DrawingItem>, Serializab
     public int compare(DrawingItem item1, DrawingItem item2)
     {
         return (item1.anchor.x + item1.anchor.y) - (item2.anchor.x + item2.anchor.y);
+    }
+
+    public void previousDrawing(DrawingItem item){
+        previousState = item;
+    }
+
+    public boolean overlaps(DrawingItem other){
+        if (this.boundingBox().intersects(other.boundingBox())){
+            return true;
+        }
+        else return false;
+    }
+    public boolean insideBoundingBox(Point point){
+        if(this.boundingBox().contains(point)){
+            return true;
+        }
+        else return false;
     }
 }
