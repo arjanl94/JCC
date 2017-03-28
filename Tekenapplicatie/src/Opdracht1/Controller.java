@@ -57,17 +57,40 @@ public class Controller implements Initializable {
     }
 
     public void addDrawings(String item){
-        if (item.equals("Polygon")){
-            Point[] points = new Point[] {new Point(110, 110), new Point(110, 135), new Point( 190,160), new Point(200, 110)};
-            drawing.addDrawing(new Opdracht1.Classes.Polygon(Opdracht1.Color.RED, new Point(200,200), 2.0, points));
+        if (item.equals("Polygon")) {
+            Point[] points = new Point[]{new Point(110, 110), new Point(110, 135), new Point(190, 160), new Point(200, 110)};
+            Polygon polygon = new Opdracht1.Classes.Polygon(Opdracht1.Color.RED, new Point(200, 200), 2.0, points);
+            boolean overlap = false;
+            for (DrawingItem drawingItem : drawing.getDrawingItems()) {
+                if (polygon.overlaps(drawingItem)) {
+                    System.out.println("Item overlaps");
+                    overlap = true;
+                    break;
+                }
+                if (!overlap){
+                    drawing.addDrawing(polygon);
+                }
+            }
         }
         else if (item.equals("Text")){
             drawing.addDrawing(new PaintedText(Opdracht1.Color.BLACK, new Point(50,100), "Dit is tekst", "Serif"));
         }
         else if (item.equals("Oval")){
             if (drawing.getNumber() == 0){
-                drawing.addDrawing(new Oval(Opdracht1.Color.GREEN, new Point(10,10), 5, 50, 50));
-                drawing.setNumber(1);
+                Oval oval = new Oval(Opdracht1.Color.GREEN, new Point(10,10), 5, 50, 50);
+                boolean overlap = false;
+                for (DrawingItem drawingItem : drawing.getDrawingItems()) {
+                    if (oval.overlaps(drawingItem)){
+                        System.out.println("Item overlaps");
+
+                        overlap = true;
+                        break;
+                    }
+                    if (!overlap){
+                        drawing.addDrawing(oval);
+                        drawing.setNumber(1);
+                    }
+                }
             }
             else{
                 drawing.addDrawing(new Oval(Opdracht1.Color.BLUE, new Point(220,20), 10,90,180));
@@ -79,39 +102,52 @@ public class Controller implements Initializable {
     public void DrawItems(Drawing drawing){
         clearCanvas();
         GraphicsContext gc = canvas.getGraphicsContext2D();
+        ArrayList<DrawingItem> drawnItems = new ArrayList<>();
         for (DrawingItem item: drawing.getDrawingItems())
         {
-            if (item instanceof Oval){
-                gc.setStroke(javafx.scene.paint.Paint.valueOf(item.getColor().toString()));
-                gc.setLineWidth(((Oval) item).getWeight());
-                gc.strokeOval(item.getAnchor().getX(), item.getAnchor().getY(), item.getWidth(), item.getHeight());
-                System.out.println(item.toString());
-            }
-            else if (item instanceof PaintedText){
-                PaintedText text = (PaintedText) item;
-                gc.setFill(javafx.scene.paint.Paint.valueOf(item.getColor().toString()));
-                gc.setFont(new javafx.scene.text.Font(text.getFontName(), 10));
-                gc.fillText(((PaintedText) item).getContent(), item.getAnchor().getX(), item.getAnchor().getY());
-                System.out.println(item.toString());
-            }
-            else if (item instanceof Polygon){
-                gc.setStroke(javafx.scene.paint.Paint.valueOf(item.getColor().toString()));
-                gc.setLineWidth(((Polygon) item).getWeight());
-                ArrayList<Double> xwaarden = new ArrayList<>();
-                ArrayList<Double> ywaarden = new ArrayList<>();
-                for (Point x: ((Polygon) item).getVertices())
-                {
-                    xwaarden.add(x.getX());
+            int count = 0;
+            for (DrawingItem drawnItem : drawnItems) {
+                if (item.overlaps(drawnItem)){
+                    count = 1;
                 }
-                for (Point x: ((Polygon) item).getVertices())
-                {
-                    ywaarden.add(x.getY());
+            }
+            if (count == 0){
+                if (item instanceof Oval){
+                    gc.setStroke(javafx.scene.paint.Paint.valueOf(item.getColor().toString()));
+                    gc.setLineWidth(((Oval) item).getWeight());
+                    gc.strokeOval(item.getAnchor().getX(), item.getAnchor().getY(), item.getWidth(), item.getHeight());
+                    System.out.println(item.toString());
                 }
-                double[] xarray = convertDoubles(xwaarden);
-                double[] yarray = convertDoubles(ywaarden);
+                else if (item instanceof PaintedText){
+                    PaintedText text = (PaintedText) item;
+                    gc.setFill(javafx.scene.paint.Paint.valueOf(item.getColor().toString()));
+                    gc.setFont(new javafx.scene.text.Font(text.getFontName(), 10));
+                    gc.fillText(((PaintedText) item).getContent(), item.getAnchor().getX(), item.getAnchor().getY());
+                    System.out.println(item.toString());
+                }
+                else if (item instanceof Polygon){
+                    gc.setStroke(javafx.scene.paint.Paint.valueOf(item.getColor().toString()));
+                    gc.setLineWidth(((Polygon) item).getWeight());
+                    ArrayList<Double> xwaarden = new ArrayList<>();
+                    ArrayList<Double> ywaarden = new ArrayList<>();
+                    for (Point x: ((Polygon) item).getVertices())
+                    {
+                        xwaarden.add(x.getX());
+                    }
+                    for (Point x: ((Polygon) item).getVertices())
+                    {
+                        ywaarden.add(x.getY());
+                    }
+                    double[] xarray = convertDoubles(xwaarden);
+                    double[] yarray = convertDoubles(ywaarden);
 
-                gc.strokePolygon(xarray, yarray, xwaarden.size());
-                System.out.println(item.toString());
+                    gc.strokePolygon(xarray, yarray, xwaarden.size());
+                    System.out.println(item.toString());
+                }
+                drawnItems.add(item);
+            }
+            else{
+                System.out.println("Item overlaps previous drawn item");
             }
         }
     }

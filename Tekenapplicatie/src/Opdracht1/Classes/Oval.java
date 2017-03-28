@@ -32,6 +32,11 @@ public class Oval extends DrawingItem
         return this.height;
     }
 
+    @Override
+    protected Rectangle calculateBoundingBox() {
+        return new Rectangle(this.getAnchor().x, this.getAnchor().y, this.getAnchor().x + (int)this.width,this.getAnchor ().y + (int)this.height);
+    }
+
     public Oval(Color color, Point anchor, double weight, double width, double height)
     {
         super(color, anchor);
@@ -39,12 +44,12 @@ public class Oval extends DrawingItem
         this.width = width;
         this.height = height;
     }
-
+/*
     @Override
     Rectangle boundingBox(){
         return new Rectangle(this.getAnchor().x, this.getAnchor().y, (int)this.width, (int)this.height);
     }
-
+*/
     @Override
     public String toString(){
         return "Oval - Color: " + getColor() + " Anchor x/y: " + getAnchor().getX() + "/" + getAnchor().getY() + " Weight: " + weight + " Width/Height: " + width + "/" + height;

@@ -29,11 +29,6 @@ public class PaintedText extends DrawingItem
     }
 
     @Override
-    Rectangle boundingBox() {
-        return new Rectangle(getAnchor().x, getAnchor().y, Width, Height);
-    }
-
-    @Override
     public double getWidth() {
         Font font = new Font(fontName,Font.PLAIN, 10);
         FontMetrics fontMetrics = new FontMetrics(font){};
@@ -49,6 +44,11 @@ public class PaintedText extends DrawingItem
         double height = fontMetrics.getHeight();
         Height = (int)height;
         return height;
+    }
+
+    @Override
+    protected Rectangle calculateBoundingBox() {
+        return new Rectangle(getAnchor().x, getAnchor().y, Width, Height);
     }
 
     public PaintedText(Opdracht1.Color color, Point anchor, String content, String fontname)

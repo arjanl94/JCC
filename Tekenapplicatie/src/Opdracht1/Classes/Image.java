@@ -11,12 +11,12 @@ import java.io.File;
 public class Image extends DrawingItem
 {
     private File file;
-
+/*
     @Override
     Rectangle boundingBox() {
         return null;
     }
-
+*/
     @Override
     public Point getAnchor() {
         return null;
@@ -30,6 +30,11 @@ public class Image extends DrawingItem
     @Override
     public double getHeight() {
         return 0;
+    }
+
+    @Override
+    protected Rectangle calculateBoundingBox() {
+        return null;
     }
 
     public Image(Opdracht1.Color color, Point anchor, File file)

@@ -30,11 +30,6 @@ public class Polygon extends DrawingItem
     }
 
     @Override
-    Rectangle boundingBox() {
-        return new Rectangle(x, y, Width, Height);
-    }
-
-    @Override
     public double getWidth()
     {
         double min = 1000;
@@ -76,6 +71,11 @@ public class Polygon extends DrawingItem
         y = (int)min;
         Height = (int)height;
         return height;
+    }
+
+    @Override
+    protected Rectangle calculateBoundingBox() {
+        return new Rectangle(x, y, Width, Height);
     }
 
     public Polygon(Opdracht1.Color color, Point anchor, Double weight, Point[] vertices)
