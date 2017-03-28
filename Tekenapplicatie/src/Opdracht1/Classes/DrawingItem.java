@@ -46,7 +46,7 @@ public abstract class DrawingItem implements Comparator<DrawingItem>, Serializab
         return (item1.anchor.x + item1.anchor.y) - (item2.anchor.x + item2.anchor.y);
     }
 
-    public void previousDrawing(DrawingItem item){
+    public void setPreviousDrawing(DrawingItem item){
         previousState = item;
     }
 
@@ -61,8 +61,5 @@ public abstract class DrawingItem implements Comparator<DrawingItem>, Serializab
         else return false;
     }
 
-    public Rectangle getBoundingBox() {
-        return boundingBox;
-    }
     protected abstract Rectangle calculateBoundingBox();
 }

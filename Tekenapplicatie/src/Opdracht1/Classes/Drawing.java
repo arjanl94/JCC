@@ -40,4 +40,15 @@ public class Drawing implements java.io.Serializable
     public void setNumber(int number) {
         this.number = number;
     }
+
+    public void previousDrawing(int i){
+        if (i <= drawingItems.size()){
+            DrawingItem item = drawingItems.get(drawingItems.size() - i);
+            System.out.println("Drawing: " + item.toString());
+            previousDrawing(i + 1);
+        }
+        else{
+            System.out.println("End of list Drawings");
+        }
+    }
 }

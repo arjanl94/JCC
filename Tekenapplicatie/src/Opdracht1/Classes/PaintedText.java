@@ -32,8 +32,7 @@ public class PaintedText extends DrawingItem
     public double getWidth() {
         Font font = new Font(fontName,Font.PLAIN, 10);
         FontMetrics fontMetrics = new FontMetrics(font){};
-        double width = fontMetrics.stringWidth(content);
-        Width = (int)width;
+        double width = fontMetrics.getHeight();
         return width;
     }
 
@@ -42,7 +41,6 @@ public class PaintedText extends DrawingItem
         Font font = new Font(fontName,Font.PLAIN, 10);
         FontMetrics fontMetrics = new FontMetrics(font){};
         double height = fontMetrics.getHeight();
-        Height = (int)height;
         return height;
     }
 
@@ -56,6 +54,8 @@ public class PaintedText extends DrawingItem
         super(color, anchor);
         this.content = content;
         this.fontName = fontname;
+        Height = (int)getHeight();
+        Width = (int)getWidth();
     }
 
     @Override

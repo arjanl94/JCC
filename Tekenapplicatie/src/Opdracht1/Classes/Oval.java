@@ -44,12 +44,7 @@ public class Oval extends DrawingItem
         this.width = width;
         this.height = height;
     }
-/*
-    @Override
-    Rectangle boundingBox(){
-        return new Rectangle(this.getAnchor().x, this.getAnchor().y, (int)this.width, (int)this.height);
-    }
-*/
+
     @Override
     public String toString(){
         return "Oval - Color: " + getColor() + " Anchor x/y: " + getAnchor().getX() + "/" + getAnchor().getY() + " Weight: " + weight + " Width/Height: " + width + "/" + height;

@@ -4,6 +4,7 @@ import Opdracht1.*;
 
 import java.awt.*;
 import java.io.Serializable;
+import java.util.Arrays;
 
 /**
  * Created by Arjan on 16-2-2017.
@@ -75,14 +76,14 @@ public class Polygon extends DrawingItem
 
     @Override
     protected Rectangle calculateBoundingBox() {
-        return new Rectangle(x, y, Width, Height);
+        return new Rectangle(this.x, this.y, this.x + this.Width, this.y + this.Height);
     }
 
     public Polygon(Opdracht1.Color color, Point anchor, Double weight, Point[] vertices)
     {
         super(color, anchor);
         this.weight = weight;
-        this.vertices = vertices;
+        this.vertices = Arrays.copyOf(vertices, vertices.length);
     }
 
     @Override
